@@ -1,14 +1,13 @@
 
 # Memory Leak Detection (MLD)
 
-Memory Leak Detection (MLD) is a project designed to help developers identify and report memory leaks in C applications. This system registers and tracks the dynamic memory allocations of objects, marking them as reachable or leaked depending on whether they're accessible from global variables or root objects in the program.
+Memory Leak Detection (MLD) is a project designed to identify and report memory leaks in C applications. This system registers and tracks the dynamic memory allocations of objects, marking them as reachable or leaked depending on whether they're accessible from global variables or root objects in the program.
 
 ## Features
 
 - Automatically register memory allocations for tracking.
 - Detect unreachable memory blocks during program execution.
 - Support for both primitive and complex data types, including user-defined structures.
-- Root object tracking to prevent false-positive leak detections.
 - Memory leak reports with detailed information about the leaked objects.
 
 ## Components
@@ -124,6 +123,3 @@ This example shows the registration of `emp_t` and `student_t` structures, the a
 3. Use the provided API to track your memory allocations.
 4. Run the program to see if there are any memory leaks in your application.
 
-## Contribution
-
-Feel free to submit issues, fork the repository, and submit pull requests to improve this project!
