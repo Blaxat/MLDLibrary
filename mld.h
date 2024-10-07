@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <string.h>
 
-/*Structure Data base Definition Begin*/
+/*Structure Data base Definition Begins*/
 
 #define MAX_STRUCTURE_NAME_SIZE 128
 #define MAX_FIELD_NAME_SIZE 128
@@ -54,7 +54,6 @@ typedef struct _struct_db_{
     unsigned int count;
 } struct_db_t;
 
-/*Structure Data base Definition Ends*/
 
 
 void print_structure_rec (struct_db_rec_t *struct_rec); 
@@ -115,5 +114,7 @@ void report_leaked_objects(object_db_t *object_db);
 void mld_set_dynamic_object_as_root(object_db_t *object_db, void *obj_ptr);
 
 void mld_init_primitive_data_types(struct_db_t *struct_db);
+
+/*Object Database structure definitions ends here*/
 
 #endif /* __MLD__ */
