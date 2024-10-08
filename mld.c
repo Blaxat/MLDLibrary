@@ -20,7 +20,7 @@ void print_structure_rec(struct_db_rec_t *struct_rec){
         field = &struct_rec->fields[j];
         printf("  %-20s |", "");
         printf("%-3d %-20s | dtype = %-15s | size = %-5d | offset = %-6d|  nstructname = %-20s  |\n",
-                j, field->fname, DATA_TYPE[field->dtype], field->size, field->offset, field->nested_str_name);
+                j+1, field->fname, DATA_TYPE[field->dtype], field->size, field->offset, field->nested_str_name);
         printf("  %-20s |", "");
         printf(ANSI_COLOR_CYAN "--------------------------------------------------------------------------------------------------------------------------|\n" ANSI_COLOR_RESET);
     }
@@ -35,9 +35,10 @@ void print_structure_db(struct_db_t *struct_db){
     struct_rec = struct_db->head;
     printf("Number of Structures Registered = %d\n", struct_db->count);
     while(struct_rec){
-        printf("structure No : %d (%p)\n", i++, struct_rec);
+        printf("structure No : %d (%p)\n", i+1, struct_rec);
         print_structure_rec(struct_rec);
         struct_rec = struct_rec->next;
+        i++;
     }
 }
 
